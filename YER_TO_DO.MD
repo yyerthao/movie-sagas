@@ -19,17 +19,17 @@
     [] create junction table between movies and genres table
         [] generate some data for the junction table just added
 
-3. List Page 
+3. Home/List Page 
 * This should display ALL of the movies in the movie database. 
     [] movie img poster
-        [] onClick={handleClick}
-            [] this.props.history.push('/details')
+        [x] onClick={handleClick}
+            [x] this.props.history.push('/details')
 
 4. Details View
 * This should show all details including genres, for the selected movie
 * HINT: Can make a GET request for a specific movie
-    [] Button: Back to List
-        [] this.props.history.push('/')      / brings user back to List Page
+    [x] Button: Back to List
+        [x] this.props.history.push('/')      / brings user back to List Page
 * Base functionality does not require the movie details to load correctly after refresh of the browser
 
 5. Add Movie Page
