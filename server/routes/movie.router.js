@@ -5,7 +5,7 @@ const pool = require('../modules/pool')
  
 router.get('/', (req, res) => {
   // Add query to get all genres
-  const sqlText = `SELECT * FROM movies ORDER BY title;`
+  const sqlText = `SELECT * FROM movies ORDER BY title;`;
   pool.query(sqlText)
   .then((result) => {
     res.send(result.rows)
@@ -15,8 +15,6 @@ router.get('/', (req, res) => {
     console.log('Error making database query', error);
     res.sendStatus(500)
   })
-
-  res.sendStatus(500)
 });
 
 

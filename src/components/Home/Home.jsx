@@ -11,7 +11,15 @@ class Home extends Component {
     render() {
         return (
             <>
-                {/*  */}
+                {this.props.reduxState.movies.map ((movie, i) => {
+                    return(
+                        <div key={i}>
+                            <p>{movie.title}</p>
+                            <img src={movie.poster} alt="Poster"></img>
+                            <p>{movie.description}</p>
+                        </div>
+                    )
+                })}
             </>
         )
     }
