@@ -1,13 +1,21 @@
 ### To Do List
 
 1.  Set Up:
-    [] npm install
-    [] npm run server 
-    [] npm run client
+    [x] npm install
+    [Already pre-installed] npm install redux
+    [Already pre-installed] npm install react-redux
+    [Already pre-installed] npm install react-router-dom
+    [Already pre-installed] npm install redux-logger
+    [Already pre-installed] npm install redux-saga
+    [x] npm install dotenv
+    [x] npm install @material-ui/core
+
+    [x] npm run server 
+    [x] npm run client
 
 2. Database:
-    [] create a database named: saga_movies_weekend
-    [] run the queries from database.sql on database created
+    [x] create a database named: saga_movies_weekend
+    [x] run the queries from database.sql on database created
     [] create junction table between movies and genres table
         [] generate some data for the junction table just added
 
