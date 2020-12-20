@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   const sqlText = `SELECT * FROM movies ORDER BY title;`;
   pool.query(sqlText)
   .then((result) => {
-    res.send(result.rows)
+    res.send(result.rows) 
     console.log(result.rows)
   })
   .catch((error) => {
@@ -19,7 +19,22 @@ router.get('/', (req, res) => {
 
 
 
-
+router.get('/id', (req, res) => {
+  let id = req.params.id;
+  console.log('Id of chosen movie', id);
+  // Add query to get all genres
+  let sqlText = `
+      SELECT title, name, description, poster FROM movies_genres
+      JOIN movies ON movies.id = movies_genres.movies_id
+      JOIN genres ON genres.id = movies_genres.genres_id
+      WHERE movies.id = $1;`;
+  pool.query(sqlText, [id]).then((result) => {
+    res.send(result.rows);
+  }).catch((error) => {
+    console.log('Error GET genre of chosen movie', error)
+    res.sendStatus(500);
+  });
+})
 
 router.post('/', (req, res) => {
   console.log(req.body);

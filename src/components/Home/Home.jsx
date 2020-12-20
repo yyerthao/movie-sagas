@@ -19,13 +19,13 @@ class Home extends Component {
                 {this.props.reduxState.movies.map ((movie, i) => {
                     return(
                         <div key={i}>
-                            <p>{movie.title}</p>
+                            <h3>{movie.title}</h3>
                             <img 
                                 src={movie.poster} 
                                 alt="Poster"
                                 onClick={() => this.getMovieInfo(movie)}>
                             </img>
-                            <p>{movie.description}</p>
+                            {/* <p>{movie.description}</p> */}
                         </div>
                     )
                 })}

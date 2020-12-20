@@ -7,25 +7,25 @@ import Movie from '../Movie/Movie';
 
 class App extends Component {
   // Renders the entire app on the DOM
-
-
-
   render() {
     return (
       <div className="App">
         <h1>List Of Movies</h1>
+        <div className="inner-div">
+
         <Router>
-          <Link to="/details" replace>Details</Link>
+          {/* <Link to="/details" replace>Details</Link> */}
           <br></br>
           <Link to="/movie" replace>Add Movie</Link>
           {/* ADD PAGES! */}
+          <br></br>
           <Route exact path="/" component={Home}></Route>
           <Route exact path="/details" component={Details}></Route>
           <Route exact path="/movie" component={Movie}></Route>
         </Router>
 
 
-        {/* <p>Empty Page</p> */}
+        </div>
       </div>
     );
   }
