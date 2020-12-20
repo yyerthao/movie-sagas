@@ -7,6 +7,11 @@ class Home extends Component {
     this.props.dispatch({type: 'FETCH_MOVIE'});
     }
 
+    getMovieInfo = (movie) => {
+    console.log('Getting movie details')
+    this.props.dispatch({type: 'SET_DETAILS', payload: movie})
+    this.props.history.push('/details')
+    }
 
     render() {
         return (
@@ -15,7 +20,11 @@ class Home extends Component {
                     return(
                         <div key={i}>
                             <p>{movie.title}</p>
-                            <img src={movie.poster} alt="Poster"></img>
+                            <img 
+                                src={movie.poster} 
+                                alt="Poster"
+                                onClick={() => this.getMovieInfo(movie)}>
+                            </img>
                             <p>{movie.description}</p>
                         </div>
                     )

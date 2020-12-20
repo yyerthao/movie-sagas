@@ -31,6 +31,16 @@ const genres = (state = [], action) => {
             return state;
     }
 }
+
+const details = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_DETAILS':
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
         
 function* getMovie(){
     console.log('Fetching movie');
@@ -42,10 +52,21 @@ function* getMovie(){
     }
 }
 
+function* getGenre(){
+    console.log('Fetching genre');
+    try{
+        const response = yield axios.get('/api/genre')
+        yield put({type: 'SET_GENRES', payload: response.data})
+    } catch(error){
+        console.log('error with genre fetch request', error);
+    }
+}
+
 
 // Create the rootSaga generator function
 function* rootSaga() {
 yield takeEvery('FETCH_MOVIE', getMovie)
+yield takeEvery('FETCH_GENRE', getGenre)
 }
 
 // Create sagaMiddleware
@@ -59,6 +80,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        details
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
