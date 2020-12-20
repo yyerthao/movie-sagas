@@ -22,7 +22,8 @@ const movies = (state = [], action) => {
                 return state;
             }
         }
-        
+
+// Used to store genres returned from the server        
 const genres = (state = [], action) => {
     switch (action.type) {
         case 'SET_GENRES':
@@ -32,6 +33,7 @@ const genres = (state = [], action) => {
     }
 }
 
+// Used to store details returned from the server
 const details = (state = [], action) => {
     switch (action.type) {
         case 'SET_DETAILS':
@@ -41,7 +43,16 @@ const details = (state = [], action) => {
     }
 }
 
-        
+// Starting from Home.jsx, we will dispatch an action type called FETCH_MOVIE
+// Our rootSaga or watcherSaga on this page watch for FETCH_MOVIE to come through,
+// then it'll run the function attached to it, which is getMovie
+// this * SAGA function will make a axios get to our server
+// then it'll come back with a response of data from our database,
+// and send that through to our SET_MOVIES reducer.
+// Essentially, this is why sagas are the middleman, they can communicate to our
+// server, then bring back info (or post info to), then it'll communicate that
+// to our reducer
+// our reducers are what actually stores the data to render to DOM
 function* getMovie(){
     console.log('Fetching movie');
     try{
