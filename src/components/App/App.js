@@ -12,7 +12,6 @@ class App extends Component {
       <div className="App">
         <h1>Home Cinema</h1>
         <div className="inner-div">
-
         <Router>
           {/* ADD PAGES! */}
           <br></br>
@@ -20,8 +19,6 @@ class App extends Component {
           <Route exact path="/details" component={Details}></Route>
           <Route exact path="/movie" component={Movie}></Route>
         </Router>
-
-
         </div>
       </div>
     );

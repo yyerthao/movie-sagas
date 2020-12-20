@@ -11,6 +11,8 @@ html{
 
 .App {
   text-align: center;
+  font-family: 'Piazzolla',
+  serif;
 }
 
 
@@ -19,6 +21,8 @@ html{
   height: 150px;
   padding: 30px;
   color: rgb(252, 244, 244);
+  position: fixed;
+  width: 100%;
 }
 
 .App-title {
@@ -36,8 +40,8 @@ html{
 
 
 .inner-div{
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
 }
 
 img{
@@ -46,8 +50,16 @@ img{
   box-shadow: 10px 10px 10px rgba(250, 248, 248, 0.064);
 }
 
-h1{
+h1 {
   font-family: 'Bungee Outline', cursive;
   font-size: 5rem;
-  background-color: rgb(50, 49, 49);
+  background-color: rgb(41 41 41);
+  padding: 2rem;
+  margin: 0;
+  box-shadow: 10px 10px 10px rgba(87, 114, 203, 0.16);
+}
+
+
+h3{
+  font-size: 2rem;
 }
