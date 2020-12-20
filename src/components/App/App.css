@@ -1,9 +1,9 @@
 
 html{
-  background-image: url(cinema.jpeg);
+  background-image: url(cinem.jpeg);
   background-position: cover;
   color: white;
-  background-color: black;;
+  background-color:black;;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -15,9 +15,15 @@ html{
   serif;
 }
 
+a{
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+
 
 .App-header {
-  background-color: #222;
+  background-color: rgb(38, 37, 37);
   height: 150px;
   padding: 30px;
   color: rgb(252, 244, 244);
@@ -40,23 +46,28 @@ html{
 
 
 .inner-div{
-  margin-left: 12rem;
-  margin-right: 12rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  background: rgba(224, 236, 242, 0.632);
+  border-radius: 0.3rem;
+  color: black;
 }
 
 img{
   border-radius: 0.5rem;
   border: solid rgba(255, 255, 255, 0.05);
   box-shadow: 10px 10px 10px rgba(250, 248, 248, 0.064);
+  border-radius: 1rem;
 }
 
 h1 {
   font-family: 'Bungee Outline', cursive;
   font-size: 5rem;
-  background-color: rgb(41 41 41);
-  padding: 2rem;
+  background-color: rgb(34, 34, 34);
+  padding: 1.1rem;
   margin: 0;
-  box-shadow: 10px 10px 10px rgba(87, 114, 203, 0.16);
+  box-shadow: 10px 10px 10px rgba(86, 105, 167, 0.454);
+
 }
 
 

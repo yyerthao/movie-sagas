@@ -73,11 +73,22 @@ function* getGenre(){
     }
 }
 
+// put is like dispatching an action type
+function* addMovie(action){
+    console.log('Adding movie from user');
+    try{
+        yield axios.post('/api/movie', action.payload);
+        yield put({type: 'SET_MOVIES'})
+    } catch (error) {
+        console.log('error with posting movie request', error);
+    }
+}
 
 // Create the rootSaga generator function
 function* rootSaga() {
 yield takeEvery('FETCH_MOVIE', getMovie)
 yield takeEvery('FETCH_GENRE', getGenre)
+yield takeEvery('POST_MOVIE', addMovie)
 }
 
 // Create sagaMiddleware

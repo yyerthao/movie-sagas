@@ -33,20 +33,20 @@
 * Base functionality does not require the movie details to load correctly after refresh of the browser
 
 5. Add Movie Page
-    [] input field for movie title
-    [] input field for movie poster image URL
-    [] text area for movie description
+    [x] input field for movie title
+    [x] input field for movie poster image URL
+    [x] text area for movie description
     [] a dropdown (for the genres)
 
-    [] Cancel button
+    [x] Cancel button
         [] dispatch action type to clear array 
-        [] this.props.history.push('/')
+        [x] this.props.history.push('/')
 
-    [] Save Button
-        [] update title and description in database
-            [] dispatch action type to saga 
-        [] bring user back to home page, should now have new movie after this
-            [] this.props.history.push('/')
+    [x] Save Button
+        [x] update title and description in database
+            [x] dispatch action type to saga 
+        [x] bring user back to home page, should now have new movie after this
+            [x] this.props.history.push('/')
 * HINT: Look at the /api/movie POST route -- it's been made already
 * HINT: You'll want to use the genres that are in the DDB for your dropdown
 * HINT: Base does NOT require being able to select more than one genre for a new movie
