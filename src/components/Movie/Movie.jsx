@@ -25,7 +25,6 @@ addTitle = () => {
                 {/* button to take user back home */}
                 <button onClick={this.goHome}>Go Home</button>
                 <br></br>
-                <h1>Hello from Movie</h1>
                 {/* applying handleTitle function to input form */}
                 <input onChange={this.handleTitle}></input>
                 {/* button to add title, will dispatch to post with saga then to reducer */}
