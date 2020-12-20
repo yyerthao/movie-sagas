@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import './Details.css'
+;import { connect } from 'react-redux';
 
 class Details extends Component {
 
@@ -18,19 +19,23 @@ goHome = () => {
 
 
 // function to 
-getdetailInfo = (detail) => {
+getdetailInfo = (details) => {
     console.log('Movie detail')
-    this.props.dispatch({ type: 'SET_DETAILS', payload: detail})
+    this.props.dispatch({ type: 'SET_DETAILS', payload: details})
 }
 
 
     render() {
         return (
             <>
-            {JSON.stringify(this.props.reduxState.details)}
+            {/* {JSON.stringify(this.props.reduxState.details)} */}
             <h1> Hello from Details </h1>
                 <button onClick={this.goHome}>Back to Home</button>
-
+                <br></br>
+            <img src={this.props.reduxState.details.poster} alt="Poster"></img>
+            <p>
+            {this.props.reduxState.details.description}
+            </p>
             </>
         )
     }

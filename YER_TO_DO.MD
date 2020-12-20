@@ -16,8 +16,8 @@
 2. Database:
     [x] create a database named: saga_movies_weekend
     [x] run the queries from database.sql on database created
-    [] create junction table between movies and genres table
-        [] generate some data for the junction table just added
+    [x] create junction table between movies and genres table
+        [x] generate some data for the junction table just added
 
 3. Home/List Page 
 * This should display ALL of the movies in the movie database. 

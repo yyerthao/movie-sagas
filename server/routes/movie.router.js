@@ -2,10 +2,11 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
- 
+ // GET with sql commands sent to DB to retrieve
+ // data from table MOVIES
 router.get('/', (req, res) => {
   // Add query to get all genres
-  const sqlText = `SELECT * FROM movies ORDER BY title;`;
+  const sqlText = `SELECT * FROM movies;`;
   pool.query(sqlText)
   .then((result) => {
     res.send(result.rows) 
@@ -18,8 +19,8 @@ router.get('/', (req, res) => {
 });
 
 
-
-router.get('/id', (req, res) => {
+// GET to retrieve targeted ID from junction table from DB
+router.get('/:id', (req, res) => {
   let id = req.params.id;
   console.log('Id of chosen movie', id);
   // Add query to get all genres
@@ -28,8 +29,10 @@ router.get('/id', (req, res) => {
       JOIN movies ON movies.id = movies_genres.movies_id
       JOIN genres ON genres.id = movies_genres.genres_id
       WHERE movies.id = $1;`;
-  pool.query(sqlText, [id]).then((result) => {
-    res.send(result.rows);
+  pool.query(sqlText, [id])
+  .then((result) => {
+    console.log(result.rows[0])
+    res.send(result.rows[0]);
   }).catch((error) => {
     console.log('Error GET genre of chosen movie', error)
     res.sendStatus(500);
