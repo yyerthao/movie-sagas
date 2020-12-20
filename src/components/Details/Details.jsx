@@ -30,11 +30,14 @@ getdetailInfo = (details) => {
             <>
             {/* {JSON.stringify(this.props.reduxState.details)} */}
             <h1> Hello from Details </h1>
-                <button onClick={this.goHome}>Back to Home</button>
-                <br></br>
-            <img src={this.props.reduxState.details.poster} alt="Poster"></img>
+            <button onClick={this.goHome}>Back to Home</button>
+            <br></br>
+            <img 
+                src={this.props.reduxState.details.poster} 
+                alt="Poster">
+            </img>
             <p>
-            {this.props.reduxState.details.description}
+                {this.props.reduxState.details.description}
             </p>
             </>
         )
