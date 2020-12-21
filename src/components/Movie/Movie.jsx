@@ -113,7 +113,8 @@ submitMovie = () => {
                     <br></br>
                     <br></br>
                 </TextField>
-
+                    <br></br>
+                    <br></br>
                 <TextField 
                     id="outlined-name"
                     label="URL"
@@ -123,7 +124,8 @@ submitMovie = () => {
                     variant="outlined"
                     onChange={(event) => this.handleChange(event, 'poster')}>
                 </TextField>
-
+                    <br></br>
+                    <br></br>
                 <TextField 
                     id="outlined-multiline-static"
                     label="DESCRIPTION"

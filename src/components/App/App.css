@@ -51,6 +51,7 @@ a{
   background: rgba(224, 236, 242, 0.632);
   border-radius: 0.3rem;
   color: black;
+  text-align: center;
 }
 
 img{
@@ -66,11 +67,15 @@ h1 {
   background-color: rgb(34, 34, 34);
   padding: 1.1rem;
   margin: 0;
-  box-shadow: 10px 10px 10px rgba(86, 105, 167, 0.454);
+  box-shadow: 25px 25px 25px rgba(247, 239, 4, 0.146);
 
 }
 
 
 h3{
   font-size: 2rem;
+}
+
+span{
+  text-align: right;
 }
