@@ -7,20 +7,36 @@ import Movie from '../Movie/Movie';
 // Material UI 
 // import { withStyles } from '@material-ui/core/styles';
 // import Button from '@material-ui/core/Button';
+// import Card from '@material-ui/core/Card';
 
 
 // const styles = theme => ({
-//   button: {
-//     margin: theme.spacing.unit,
+//   card: {
+//     maxWidth: 400,
 //   },
-//   input: {
-//     display: 'none',
+//   media: {
+//     height: 0,
+//     paddingTop: '56.25%', // 16:9
+//   },
+//   actions: {
+//     display: 'flex',
+//   },
+//   expand: {
+//     transform: 'rotate(0deg)',
+//     marginLeft: 'auto',
+//     transition: theme.transitions.create('transform', {
+//       duration: theme.transitions.duration.shortest,
+//     }),
+//   },
+//   expandOpen: {
+//     transform: 'rotate(180deg)',
 //   },
 // });
 
 
-
 class App extends Component {
+      // const { classes } = this.props;
+
 
 // addMovie = () => {
 //   this.props.history.push('/movie');
@@ -60,5 +76,5 @@ class App extends Component {
 }
 
 
-
 export default (App);
+// withStyles(styles)
