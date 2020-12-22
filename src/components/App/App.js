@@ -7,35 +7,11 @@ import Movie from '../Movie/Movie';
 // Material UI 
 // import { withStyles } from '@material-ui/core/styles';
 // import Button from '@material-ui/core/Button';
-// import Card from '@material-ui/core/Card';
 
 
-// const styles = theme => ({
-//   card: {
-//     maxWidth: 400,
-//   },
-//   media: {
-//     height: 0,
-//     paddingTop: '56.25%', // 16:9
-//   },
-//   actions: {
-//     display: 'flex',
-//   },
-//   expand: {
-//     transform: 'rotate(0deg)',
-//     marginLeft: 'auto',
-//     transition: theme.transitions.create('transform', {
-//       duration: theme.transitions.duration.shortest,
-//     }),
-//   },
-//   expandOpen: {
-//     transform: 'rotate(180deg)',
-//   },
-// });
 
 
 class App extends Component {
-      // const { classes } = this.props;
 
 
 // addMovie = () => {
@@ -45,17 +21,11 @@ class App extends Component {
 
   // Renders the entire app on the DOM
   render() {
-    // const {classes} = this.props;
+
     return (
       <div className="App">
         <h1>THE CINEMATIC EXP</h1>
-      {/* <Button 
-          variant="contained" 
-          color="primary" 
-          onClick={this.addMovie}
-          className={classes.button}>
-            Add Movie
-        </Button> */}
+
 
         <br></br>
         <div className="inner-div">
