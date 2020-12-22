@@ -48,7 +48,7 @@ class App extends Component {
     // const {classes} = this.props;
     return (
       <div className="App">
-        <h1>2020 Cinema</h1>
+        <h1>THE CINEMATIC EXP</h1>
       {/* <Button 
           variant="contained" 
           color="primary" 

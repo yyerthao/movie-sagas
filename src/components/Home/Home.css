@@ -1,0 +1,11 @@
+.img-div{
+    display: inline-block;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+}
+
+h4{
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+    word-wrap: break-word;
+}
