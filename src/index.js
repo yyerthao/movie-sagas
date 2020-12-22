@@ -28,12 +28,15 @@ const genres = (state = [], action) => {
     switch (action.type) {
         case 'SET_GENRES':
             return action.payload;
+            // should now have all genre types
+            // this allows us to map all types onto
+            // drop down menu
         default:
             return state;
     }
 }
 
-// Used to store details returned from the server
+// Used to store movie details returned from the server
 const details = (state = [], action) => {
     switch (action.type) {
         case 'SET_DETAILS':
@@ -79,8 +82,6 @@ function* addMovie(action){
     try{
         yield axios.post('/api/movie', action.payload);
         console.log('------------------- ', action.payload);
-        
-        // yield put({type: 'SET_MOVIES'})
         yield getMovie();
 
     } catch (error) {

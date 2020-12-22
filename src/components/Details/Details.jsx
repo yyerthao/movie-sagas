@@ -26,8 +26,6 @@ goHome = () => {
     this.props.history.push('/');
 }
 
-// function to bring user to movie view
-
 
 // function to 
 getdetailInfo = (details) => {
@@ -37,7 +35,7 @@ getdetailInfo = (details) => {
 
 
     render() {
-        const {classes} = this.props;
+        const {classes, details} = this.props;
         return (
             <>
             {/* Utilizie JSON.stringify to ensure array is retrieved correctly */}
@@ -48,16 +46,17 @@ getdetailInfo = (details) => {
                 onClick={this.goHome}>Back to Home
             </Button>
             <br></br>
-            <h2>{this.props.reduxState.details.title}</h2>
+            <h2>{details.title}</h2>
             <img 
-                src={this.props.reduxState.details.poster} 
+                src={details.poster} 
                 alt="Poster">
             </img>
             <h4>
-                Genre: {this.props.reduxState.details.genre}
+            {/* INCLUDE GENRE */}
+            Genre: 
             </h4>
             <p>
-                {this.props.reduxState.details.description}
+                {details.description}
             </p>
             </>
         )
@@ -65,5 +64,9 @@ getdetailInfo = (details) => {
 }
 
 
-const putStateOnProps = (reduxState) => ({ reduxState });
+const putStateOnProps = (reduxState) => ({ 
+details: reduxState.details,
+movies: reduxState.movies
+
+});
 export default connect(putStateOnProps)(withStyles(styles)(Details));

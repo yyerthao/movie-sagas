@@ -5,10 +5,13 @@ import './Home.css';
 
 
 class Home extends Component {
+    // this will fetch our movie data from DB 
     componentDidMount() {
     this.props.dispatch({type: 'FETCH_MOVIE'});
     }
 
+    // this function will dispatch our movie data to details reducer 
+    // to store all the movie data into an array
     getMovieInfo = (movie) => {
     console.log('Getting movie details')
     this.props.dispatch({type: 'SET_DETAILS', payload: movie})
@@ -16,11 +19,12 @@ class Home extends Component {
     }
 
     render() {
+        const {movies} = this.props;
         return (
             <>
                 {/* Mapping out our movies reducer, which has all of our 
                 pre-set movies from our database */}
-                {this.props.reduxState.movies.map ((movie, i) => {
+                {movies.map ((movie, i) => {
                     return(
                         <div className="img-div" key={i}>
                             <h4>{movie.title}</h4>
@@ -29,7 +33,6 @@ class Home extends Component {
                                 alt="Poster"
                                 onClick={() => this.getMovieInfo(movie)}>
                             </img>
-                            
                         </div>
                     )
                 })}
@@ -38,5 +41,8 @@ class Home extends Component {
     }
 }
 
-const putStateOnProps = (reduxState) => ({ reduxState });
+const putStateOnProps = (reduxState) => ({ 
+movies: reduxState.movies
+
+});
 export default connect(putStateOnProps)(Home);

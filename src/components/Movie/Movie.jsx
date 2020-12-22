@@ -53,11 +53,6 @@ componentDidMount(){
     this.props.dispatch({type: 'FETCH_GENRE'});
 }
 
-// function to bring user back to home
-// goHome = () => {
-//     console.log('Inside goHome button')
-//     this.props.history.push('/');
-// }
 
 //  handleChange function to handle all input changes 
 handleChange = (event, input) => {
