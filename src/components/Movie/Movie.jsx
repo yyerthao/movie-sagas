@@ -44,7 +44,7 @@ state = {
     title: '',
     poster: '',
     description: '',
-    genre: ''
+    genre_id: ''
 }   
 
 // must utilizie componentDidMount to fetch all genres
@@ -83,7 +83,7 @@ submitMovie = () => {
         title: '',
         poster: '',
         description: '',
-        genre: ''
+        genre_id: ''
     })
     // after clicking on button 'Save', go back to main to see if movie was uploaded to list
     this.props.history.push('/');
@@ -145,20 +145,18 @@ submitMovie = () => {
                             Genre
                         </InputLabel>
                         <Select 
-                            value={this.state.genre} 
-                            onChange={(event) => this.handleChange(event, 'genre')}>
+                            className="dropdown"
+                            value={this.state.genre_id} 
+                            onChange={(event) => this.handleChange(event, 'genre_id')}>
                         {/* MAPPING OUT ARRAY OF GENRES REDUCER */}
                             {this.props.reduxState.genres.map((genre, i) =>
                                 <MenuItem key={i} value={genre.id}>
                                     {genre.name}
                                 </MenuItem>)}
                         </Select>
-
-
                     </FormControl>
                 </div>
-
-
+                <div className="button-div">
                 <Button 
                     variant="contained" 
                     color="primary" 
@@ -173,15 +171,7 @@ submitMovie = () => {
                     onClick={this.submitMovie}>
                         Add Movie
                 </Button>
-
-                {/* <select 
-                    value={this.state.genre} 
-                    onChange={(event)=> this.handleChange(event, 'genre')}>
-                </select> */}
-
-
-
-
+                </div>
             </div>
         )
     }

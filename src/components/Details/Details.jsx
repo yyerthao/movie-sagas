@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import './Details.css'
 ;import { connect } from 'react-redux';
+//Material UI
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+
+const styles = theme => ({
+    button: {
+        margin: theme.spacing.unit,
+    },
+});
+
 
 class Details extends Component {
 
@@ -26,22 +37,27 @@ getdetailInfo = (details) => {
 
 
     render() {
+        const {classes} = this.props;
         return (
             <>
             {/* Utilizie JSON.stringify to ensure array is retrieved correctly */}
             {/* {JSON.stringify(this.props.reduxState.details)} */}
-            <button onClick={this.goHome}>Back to Home</button>
+            <Button 
+                variant="contained" color="primary" 
+                className={classes.button}
+                onClick={this.goHome}>Back to Home
+            </Button>
             <br></br>
             <h2>{this.props.reduxState.details.title}</h2>
             <img 
                 src={this.props.reduxState.details.poster} 
                 alt="Poster">
             </img>
+            <h4>
+                Genre: {this.props.reduxState.details.genre}
+            </h4>
             <p>
                 {this.props.reduxState.details.description}
-            </p>
-            <p>
-                {this.props.reduxState.genre}
             </p>
             </>
         )
@@ -50,4 +66,4 @@ getdetailInfo = (details) => {
 
 
 const putStateOnProps = (reduxState) => ({ reduxState });
-export default connect(putStateOnProps)(Details);
+export default connect(putStateOnProps)(withStyles(styles)(Details));

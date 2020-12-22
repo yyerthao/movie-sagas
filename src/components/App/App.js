@@ -4,19 +4,9 @@ import './App.css';
 import Home from '../Home/Home';
 import Details from '../Details/Details';
 import Movie from '../Movie/Movie';
-// Material UI 
-// import { withStyles } from '@material-ui/core/styles';
-// import Button from '@material-ui/core/Button';
-
-
 
 
 class App extends Component {
-
-
-// addMovie = () => {
-//   this.props.history.push('/movie');
-// }
 
 
   // Renders the entire app on the DOM
@@ -25,9 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>THE CINEMATIC EXP</h1>
-
-
-        <br></br>
+          <br></br>
         <div className="inner-div">
         <Router>
           <Link to="/movie" replace>
@@ -47,4 +35,3 @@ class App extends Component {
 
 
 export default (App);
-// withStyles(styles)

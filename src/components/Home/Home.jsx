@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './Home.css';
 
 
+
 class Home extends Component {
     componentDidMount() {
     this.props.dispatch({type: 'FETCH_MOVIE'});
@@ -17,6 +18,8 @@ class Home extends Component {
     render() {
         return (
             <>
+                {/* Mapping out our movies reducer, which has all of our 
+                pre-set movies from our database */}
                 {this.props.reduxState.movies.map ((movie, i) => {
                     return(
                         <div className="img-div" key={i}>
@@ -26,6 +29,7 @@ class Home extends Component {
                                 alt="Poster"
                                 onClick={() => this.getMovieInfo(movie)}>
                             </img>
+                            
                         </div>
                     )
                 })}

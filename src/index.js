@@ -78,7 +78,11 @@ function* addMovie(action){
     console.log('Adding movie from user');
     try{
         yield axios.post('/api/movie', action.payload);
-        yield put({type: 'SET_MOVIES'})
+        console.log('------------------- ', action.payload);
+        
+        // yield put({type: 'SET_MOVIES'})
+        yield getMovie();
+
     } catch (error) {
         console.log('error with posting movie request', error);
     }
