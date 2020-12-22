@@ -40,7 +40,9 @@ getdetailInfo = (details) => {
             <p>
                 {this.props.reduxState.details.description}
             </p>
-                {this.props.reduxState.details.genre}
+            <p>
+                {this.props.reduxState.genre}
+            </p>
             </>
         )
     }
