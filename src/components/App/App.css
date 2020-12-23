@@ -81,12 +81,14 @@ img{
   background-color: rgb(28, 28, 28);
   padding: 2.5rem;
   margin: 0;
-  box-shadow: 0 0 50px rgba(6, 235, 201, 0.297);
+  box-shadow: 10px 10px 10px rgba(222, 23, 240, 0.283);
+
   overflow: hidden;
   display: block;
   position: fixed;
   width: 100%;
   text-shadow: 4px 4px 4px rgba(4, 238, 148, 0.927);
+
 }
 
 
@@ -100,13 +102,13 @@ p{
 }
 
 .add-movie-btn{
-  background-color: rgba(5, 210, 233, 0.687);
+  background-color: rgba(5, 210, 233, 0.571);
   border-radius: 0.2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   color: black;
   box-shadow: inset -2px -2px rgba(0, 0, 0, 0.502),
-  inset 2px 2px rgba(210, 206, 206, 0.481);
+  inset 2px 2px rgba(210, 206, 206, 0.345);
 
   /* https://stackoverflow.com/questions/38377062/
   how-to-make-html-button-look-pressed-in-using-css */
@@ -114,6 +116,13 @@ p{
     border: 1px solid #ccc;
     cursor: pointer;
 
+}
+
+/* on hover, "button" will look pressed */
+/* https://www.w3schools.com/cssref/sel_hover.asp */
+.add-movie-btn:hover {
+box-shadow: inset 2px 2px rgba(97, 96, 96, 0.892),
+inset -2px -2px rgba(0, 0, 0, 0.29);
 }
 
 

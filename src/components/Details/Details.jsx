@@ -53,7 +53,7 @@ getdetailInfo = (details) => {
             </img>
             <h4>
             {/* INCLUDE GENRE */}
-            Genre: 
+            Genre: {details.genre}
             </h4>
             <p>
                 {details.description}

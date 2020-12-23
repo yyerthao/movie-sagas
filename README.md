@@ -23,9 +23,9 @@ Create an application where user can select movie from movie list upon opening l
 
 ![Landing Page](./Screenshots/landingpage.png)
 
-* Details View
+<!-- * Details View
 
-![Details View](./Screenshots/DetailsView.png)
+![Details View](./Screenshots/DetailsView.png) -->
 
 * Add Movie View
 

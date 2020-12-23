@@ -23,7 +23,7 @@ class Home extends Component {
         return (
             <>
                 <h2 className="instruction-text">Please click on one of the following movies for further details.</h2>
-                <h2 className="instruction-text, h2-margin">Also, because 2020...free popcorn for everyone.</h2>
+                {/* <h2 className="instruction-text, h2-margin">Also, because 2020...free popcorn for everyone.</h2> */}
                 {/* Mapping out our movies reducer, which has all of our 
                 pre-set movies from our database */}
                 {movies.map ((movie, i) => {
