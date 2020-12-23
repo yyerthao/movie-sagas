@@ -66,11 +66,13 @@ a{
 img{
   border-radius: 0.5rem;
   border: solid rgba(255, 255, 255, 0.05);
-  box-shadow: 7px 7px 7px rgba(155, 3, 250, 0.399);
+  box-shadow: 10px 10px 10px rgba(15, 18, 116, 0.776);
   border-radius: 1rem;
   size: 20rem;
   height: 15rem;
   cursor: pointer;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 .h1-header {
@@ -84,15 +86,12 @@ img{
   display: block;
   position: fixed;
   width: 100%;
+  text-shadow: 4px 4px 4px rgba(4, 238, 148, 0.927);
 }
 
 
 h3{
   font-size: 2rem;
-}
-
-span{
-  text-align: right;
 }
 
 p{

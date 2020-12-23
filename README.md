@@ -8,7 +8,7 @@
 
 _Duration: 35 hours
 
-Create an application where user can click on movie upon landing page with movies listed. Upon clicking on specified movie, user will be directed to a new view with the details of the movie selected. User will also have option to add their own personal choice of movie, url, description, and select genre.  
+Create an application where user can select movie from movie list upon opening landing page on web browser. After clicking on specified movie, user will be directed to a new view with details of the movie selected. User will also have option to add their own personal choice of movie, URL, description, and genre.  
 
 
 ### Prerequisites
@@ -20,13 +20,16 @@ Create an application where user can click on movie upon landing page with movie
 ### Screenshots
 
 * Landing View
-![Landing Page](landingpage.png)
+
+![Landing Page](./Screenshots/landingpage.png)
 
 * Details View
-![Details View](DetailsView.png)
+
+![Details View](./Screenshots/DetailsView.png)
 
 * Add Movie View
-![Add Movie View](AddMovieView.png)
+
+![Add Movie View](./Screenshots/AddMovieView.png)
 
 
 
@@ -39,7 +42,6 @@ Create an application where user can click on movie upon landing page with movie
 4. Run `npm run server` in your terminal
 5. Run `npm run client` in your terminal
 6. The `npm run client` command will open up a new browser tab for you!
-7. Run `npm install @material-ui/core` for Material-UI styling
 
 
 ## Usage
