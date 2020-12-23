@@ -100,13 +100,23 @@ p{
 }
 
 .add-movie-btn{
-  margin-top: 5rem;
-  background-color: rgba(27, 240, 159, 0.776);
+  background-color: rgba(20, 247, 224, 0.776);
   border-radius: 0.2rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   color: black;
+  box-shadow: inset -2px -2px rgba(0, 0, 0, 0.502),
+  inset 2px 2px rgba(210, 206, 206, 0.481);
+
+  /* https://stackoverflow.com/questions/38377062/
+  how-to-make-html-button-look-pressed-in-using-css */
+  
+    border: 1px solid #ccc;
+    cursor: pointer;
+
 }
+
+
 
 
 h4 {
