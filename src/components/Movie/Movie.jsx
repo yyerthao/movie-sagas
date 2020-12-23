@@ -20,13 +20,14 @@ const styles = theme => ({
     textField: {
         marginLeft: theme.spacing.unit,
         marginRight: theme.spacing.unit,
-        width: 200,
+        width: 600,
+        background: "rgb(66, 116, 175, 0.2)"
     },
     dense: {
-        marginTop: 19,
+        marginTop: 29,
     },
     menu: {
-        width: 200,
+        width: 400,
     },
     button: {
         margin: theme.spacing.unit,
@@ -88,7 +89,7 @@ submitMovie = () => {
     render() {
         const { classes } = this.props;
         return (
-            <div>
+            <>
                 {/* Utilizing json stringify to render to dom exactly what
                 is being sent back from database */}
                     {/* {JSON.stringify(this.props.reduxState.genres)}; */}
@@ -99,7 +100,7 @@ submitMovie = () => {
 
                 <TextField 
                     id="outlined-name"
-                    label="NAME"
+                    label="TITLE"
                     className={classes.textField}
                     value={this.state.title}
                     margin="normal"
@@ -133,7 +134,7 @@ submitMovie = () => {
                 </TextField>
                     <br></br>
                     <br></br>
-                <div>
+                <section>
                     {/* START OF DROP DOWN CODES */}
                     <FormControl>
                         <InputLabel>
@@ -150,8 +151,8 @@ submitMovie = () => {
                                 </MenuItem>)}
                         </Select>
                     </FormControl>
-                </div>
-                <div className="button-div">
+                </section>
+                <section className="button-div">
                 <Button 
                     variant="contained" 
                     color="primary" 
@@ -166,8 +167,8 @@ submitMovie = () => {
                     onClick={this.submitMovie}>
                         Add Movie
                 </Button>
-                </div>
-            </div>
+                </section>
+            </>
         )
     }
 }

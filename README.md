@@ -26,7 +26,7 @@ Create an application where user can click on movie upon landing page with movie
 ![Details View](DetailsView.png)
 
 * Add Movie View
-![Details View](DetailsView.png)
+![Add Movie View](AddMovieView.png)
 
 
 

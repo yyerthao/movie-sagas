@@ -70,9 +70,10 @@ img{
   border-radius: 1rem;
   size: 20rem;
   height: 15rem;
+  cursor: pointer;
 }
 
-h1 {
+.h1-header {
   font-family: 'Bungee Outline', cursive;
   font-size: 5rem;
   background-color: rgb(28, 28, 28);
@@ -100,7 +101,7 @@ p{
 }
 
 .add-movie-btn{
-  background-color: rgba(20, 247, 224, 0.776);
+  background-color: rgba(5, 210, 233, 0.687);
   border-radius: 0.2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;

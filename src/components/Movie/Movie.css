@@ -6,4 +6,16 @@ button{
 
 .button-div {
     margin-bottom: 2rem;
+    color: rgb(166, 166, 228);
 }
+
+.dropdown{
+    width: 20rem;
+    margin-bottom: 2rem;
+    box-shadow:  5px 5px 5px rgba(230, 2, 116, 0.338);
+}
+
+
+
+/* 
+MuiOutlinedInput-input-36 */

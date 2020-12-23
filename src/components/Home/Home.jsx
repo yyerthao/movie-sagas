@@ -22,6 +22,7 @@ class Home extends Component {
         const {movies} = this.props;
         return (
             <>
+                <h2 className="instruction-text">Please click on one of the following movies for further details.</h2>
                 {/* Mapping out our movies reducer, which has all of our 
                 pre-set movies from our database */}
                 {movies.map ((movie, i) => {

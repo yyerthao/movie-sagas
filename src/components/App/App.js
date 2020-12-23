@@ -14,7 +14,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>THE CINEMATIC EXP</h1>
+        <h1 className="h1-header">THE CINEMATIC EXP</h1>
           <br></br>
         <div className="inner-div">
         <Router>
