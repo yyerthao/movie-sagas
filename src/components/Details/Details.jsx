@@ -55,7 +55,7 @@ getdetailInfo = (details) => {
             {/* INCLUDE GENRE */}
                 {/* details.genre would NOT render anything as the details 
                 array has no key of genre....  */}
-            Genre: {details.genre}
+            Genre: {details.name}
             </h4>
             <p>
                 {details.description}
