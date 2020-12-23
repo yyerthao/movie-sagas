@@ -7,7 +7,6 @@
     [Already pre-installed] npm install react-router-dom
     [Already pre-installed] npm install redux-logger
     [Already pre-installed] npm install redux-saga
-    [x] npm install dotenv
     [x] npm install @material-ui/core
 
     [x] npm run server 
@@ -21,7 +20,7 @@
 
 3. Home/List Page 
 * This should display ALL of the movies in the movie database. 
-    [] movie img poster
+    [x] movie img poster
         [x] onClick={handleClick}
             [x] this.props.history.push('/details')
 
@@ -36,10 +35,9 @@
     [x] input field for movie title
     [x] input field for movie poster image URL
     [x] text area for movie description
-    [] a dropdown (for the genres)
+    [x] a dropdown (for the genres)
 
     [x] Cancel button
-        [] dispatch action type to clear array 
         [x] this.props.history.push('/')
 
     [x] Save Button
@@ -53,8 +51,8 @@
 
 
 
-[] Material UI project
-[] Research cards for movie posters on the List Page
-[] Research grids for movie posters on the Movie List Page 
-[] Comment code
-[] Update ReadMe
+[x - a bit] Material UI project
+[x, didn't entirely enjoy layout but will give it a go again] Research cards for movie posters on the List Page
+[ - will be doing so] Research grids for movie posters on the Movie List Page 
+[x] Comment code
+[x] Update ReadMe

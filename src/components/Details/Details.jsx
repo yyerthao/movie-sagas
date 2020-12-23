@@ -40,6 +40,8 @@ getdetailInfo = (details) => {
             <>
             {/* Utilizie JSON.stringify to ensure array is retrieved correctly */}
             {/* {JSON.stringify(details)} */}
+
+            <br></br>
             <Button 
                 variant="contained" color="primary" 
                 className={classes.button}

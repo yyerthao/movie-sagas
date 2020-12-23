@@ -26,6 +26,12 @@ VALUES (1, 11), (2, 8), (3, 13), (4, 2), (5, 6), (6, 8), (7, 1), (8, 6), (9, 2),
 (12, 3), (13, 5), (14, 2);
 
 
+-- Lesson: Keep s' consistent or else you'll get a tad bit darn lost
+SELECT title, name, description, poster FROM movies_genres
+      JOIN movies ON movies.id = movies_genres.movie_id
+      JOIN genres ON movies_genres.genre_id = genres.id
+      WHERE movies.id = 1;
+
 SELECT * FROM genres;
 
 -- CREATE JUNCTION TABLE
