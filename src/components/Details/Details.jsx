@@ -30,7 +30,7 @@ goHome = () => {
 // function to 
 getdetailInfo = (details) => {
     console.log('Movie detail')
-    this.props.dispatch({ type: 'SET_DETAILS', payload: details})
+    this.props.dispatch({ type: 'SET_DETAILS', payload: details.id})
 }
 
 
@@ -39,7 +39,7 @@ getdetailInfo = (details) => {
         return (
             <>
             {/* Utilizie JSON.stringify to ensure array is retrieved correctly */}
-            {/* {JSON.stringify(this.props.reduxState.details)} */}
+            {/* {JSON.stringify(details)} */}
             <Button 
                 variant="contained" color="primary" 
                 className={classes.button}
@@ -53,6 +53,8 @@ getdetailInfo = (details) => {
             </img>
             <h4>
             {/* INCLUDE GENRE */}
+                {/* details.genre would NOT render anything as the details 
+                array has no key of genre....  */}
             Genre: {details.genre}
             </h4>
             <p>
@@ -66,7 +68,5 @@ getdetailInfo = (details) => {
 
 const putStateOnProps = (reduxState) => ({ 
 details: reduxState.details,
-movies: reduxState.movies
-
 });
 export default connect(putStateOnProps)(withStyles(styles)(Details));

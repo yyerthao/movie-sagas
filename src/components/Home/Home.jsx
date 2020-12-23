@@ -12,9 +12,9 @@ class Home extends Component {
 
     // this function will dispatch our movie data to details reducer 
     // to store all the movie data into an array
-    getMovieInfo = (movie) => {
-    console.log('Getting movie details')
-    this.props.dispatch({type: 'SET_DETAILS', payload: movie})
+    getMovieInfo = (id) => {
+    console.log('Getting id details')
+    this.props.dispatch({type: 'GET_DETAILS', payload: id})
     this.props.history.push('/details')
     }
 
@@ -33,7 +33,7 @@ class Home extends Component {
                             <img 
                                 src={movie.poster} 
                                 alt="Poster"
-                                onClick={() => this.getMovieInfo(movie)}>
+                                onClick={() => this.getMovieInfo(movie.id)}>
                             </img>
                         </div>
                     )

@@ -25,10 +25,10 @@ router.get('/:id', (req, res) => {
   console.log('Id of chosen movie', id);
   // Add query to get all genres
   let sqlText = `
-      SELECT title, name, description, poster FROM movies_genres
-      JOIN movies ON movies.id = movies_genres.movies_id
-      JOIN genres ON genres.id = movies_genres.genres_id
-      WHERE movies.id = $1;`;
+  SELECT title, name, description, poster FROM movies_genres
+  JOIN movies ON movies.id = movies_genres.movie_id
+  JOIN genres ON movies_genres.genre_id = genres.id
+  WHERE movies.id = $1;`;
   pool.query(sqlText, [id])
   .then((result) => {
     console.log(result.rows[0])

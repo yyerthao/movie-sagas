@@ -66,6 +66,21 @@ function* getMovie(){
     }
 }
 
+// add function to get specific movie with id for genre
+function* getDetails(action) {
+    console.log('Fetching genre by id');
+    try {
+        // sending id 
+        const response = yield axios.get('/api/movie/' + action.payload)
+        yield put({
+            type: 'SET_DETAILS',
+            payload: response.data
+        })
+    } catch (error) {
+        console.log('error with genre fetch request', error);
+    }
+}
+
 function* getGenre(){
     console.log('Fetching genre');
     try{
@@ -94,6 +109,7 @@ function* rootSaga() {
 yield takeEvery('FETCH_MOVIE', getMovie)
 yield takeEvery('FETCH_GENRE', getGenre)
 yield takeEvery('POST_MOVIE', addMovie)
+yield takeEvery('GET_DETAILS', getDetails)
 }
 
 // Create sagaMiddleware
