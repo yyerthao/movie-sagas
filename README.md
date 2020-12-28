@@ -22,13 +22,11 @@ Create an application where user can select movie from movie list upon opening l
 * Landing View
 ![Landing Page](./Screenshots/Landing.png)
 
-* Details View
-![Details View](./Screenshots/Details.png)
-
 * Add Movie View
 ![Add Movie View](./Screenshots/AddMovieView.png)
 
-
+* Details View
+![Details View](./Screenshots/Details.png)
 
 
 ## Installation
@@ -65,6 +63,8 @@ Create an application where user can select movie from movie list upon opening l
 
 ## Acknowledgement
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. Additionally, I'd like to thank Cassen Gerber, James Posey, and Malik Elate from the Vatti cohort of Prime Digital Academy for their guidance and code reviews.
+
+* Background photo source: https://unsplash.com/s/photos/cinema 
 
 ## Support
 If you have suggestions or issues, please email me at [maivyerthao@gmail.com] 

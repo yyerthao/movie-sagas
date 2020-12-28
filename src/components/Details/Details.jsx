@@ -27,11 +27,10 @@ goHome = () => {
 }
 
 
-// function to 
-getdetailInfo = (details) => {
-    console.log('Movie detail')
-    this.props.dispatch({ type: 'SET_DETAILS', payload: details.id})
-}
+// getdetailInfo = (details) => {
+//     console.log('Movie detail')
+//     this.props.dispatch({ type: 'SET_DETAILS', payload: details.id})
+// }
 
 
     render() {

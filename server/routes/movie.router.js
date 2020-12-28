@@ -25,10 +25,10 @@ router.get('/:id', (req, res) => {
   console.log('Id of chosen movie', id);
   // Add query to get all genres
   let sqlText = `
-  SELECT title, name, description, poster FROM movies_genres
-  JOIN movies ON movies.id = movies_genres.movie_id
-  JOIN genres ON movies_genres.genre_id = genres.id
-  WHERE movies.id = $1;`;
+    SELECT title, name, description, poster, genre_id, genres.name FROM movies_genres
+    JOIN movies ON movies.id = movies_genres.movie_id
+    JOIN genres ON genres.id = movies_genres.genre_id
+    WHERE movies.id = $1;`;
   pool.query(sqlText, [id])
   .then((result) => {
     console.log(result.rows[0])
@@ -63,7 +63,7 @@ router.post('/', (req, res) => {
       VALUES  ($1, $2);
       `
       // SECOND QUERY MAKES GENRE FOR THAT NEW MOVIE
-      pool.query(insertMovieGenreQuery, [createdMovieId, req.body.genre_id]).then(result => {
+      pool.query(insertMovieGenreQuery, [createdMovieId, req.body.genre]).then(result => {
         //Now that both are done, send back success!
         res.sendStatus(201);
       }).catch(err => {
