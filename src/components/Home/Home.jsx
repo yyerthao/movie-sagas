@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import './Home.css';
 
 
-
 class Home extends Component {
     // this will fetch our movie data from DB 
     componentDidMount() {
@@ -23,9 +22,11 @@ class Home extends Component {
         return (
             <>
                 <h2 className="instruction-text">Please click on one of the following movies for further details.</h2>
-                {/* <h2 className="instruction-text, h2-margin">Also, because 2020...free popcorn for everyone.</h2> */}
                 {/* Mapping out our movies reducer, which has all of our 
                 pre-set movies from our database */}
+
+
+
                 {movies.map ((movie, i) => {
                     return(
                         <div className="img-div" key={i}>
@@ -48,3 +49,7 @@ movies: reduxState.movies
 
 });
 export default connect(putStateOnProps)(Home);
+
+
+
+

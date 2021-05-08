@@ -25,8 +25,7 @@ INSERT INTO "movies_genres" ("movie_id", "genre_id")
 VALUES (1, 11), (2, 8), (3, 13), (4, 2), (5, 6), (6, 8), (7, 1), (8, 6), (9, 2), (10, 12), (11, 11),
 (12, 3), (13, 5), (14, 2);
 
-
--- Keep s' consistent or else you'll get a tad bit darn lost
+-- NAME represents genre name
 SELECT title, name, description, poster, genre_id, genres.name FROM movies_genres
       JOIN movies ON movies.id = movies_genres.movie_id
       JOIN genres ON genres.id = movies_genres.genre_id
