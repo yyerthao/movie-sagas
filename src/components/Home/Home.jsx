@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+// import Card from '@material-ui/core/Card';
+// import CardActionArea from '@material-ui/core/CardActionArea';
+// import CardActions from '@material-ui/core/CardActions';
+// import CardContent from '@material-ui/core/CardContent';
+// import CardMedia from '@material-ui/core/CardMedia';
+// import Button from '@material-ui/core/Button';
+// import Typography from '@material-ui/core/Typography';
+import {Grid, Image} from 'semantic-ui-react'
 import './Home.css';
 
 
@@ -58,48 +57,19 @@ class Home extends Component {
         const { spacing } = this.state;
 
         return (
-            <>
-                <h2 className="instruction-text">Please click on one of the following movies for further details.</h2>
-                <br></br>
-                <br></br>
-
-                <Grid container className={classes.root} spacing={2}>
-                    <Grid item xs={12}>
-                        <Grid container justify="center" spacing={spacing}>
-                            {movies.map((movie, i) => (
-                                <Grid key={i} item>
-                                    <Paper className={classes.paper}>
-                                        <Card className={classes.card}>
-                                            <CardActionArea>
-                                                <CardMedia
-                                                    className={classes.media}
-                                                    image={movie.poster}
-                                                    // title={movie.title}
-                                                    onClick={() => { this.getMovieInfo(movie.id) }}
-                                                    />
-                                                <CardContent>
-                                                    <Typography gutterBottom variant="h5" component="h2">
-                                                        {movie.title}
-                                                    </Typography>
-                                                </CardContent>
-                                            </CardActionArea>
-                                            <CardActions>
-                                                <Button 
-                                                    size="small" 
-                                                    color="primary" 
-                                                    Share
-                                                    onClick={() => { this.getMovieInfo(movie.id) }}
-                                                    >
-                                                </Button>
-                                            </CardActions>
-                                        </Card>
-                                    </Paper>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Grid>
+            <div>
+                <Grid>
+                    {movies.map((movie, i) => (
+                        <Grid.Row columns={3} key={i}>
+                            <Grid.Column>
+                                <Image src={movie.poster} 
+                                    onClick={() => { this.getMovieInfo(movie.id)}}/>
+                                    {/* <h4>{movie.title}</h4> */}
+                            </Grid.Column>
+                        </Grid.Row>
+                    ))}    
                 </Grid>
-            </>
+            </div>
         )
     }
 }

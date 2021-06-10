@@ -6,11 +6,8 @@ import Details from '../Details/Details';
 import Movie from '../Movie/Movie';
 
 
-class App extends Component {
+function App(){
 
-
-  // Renders the entire app on the DOM
-  render() {
 
     return (
       <div className="App">
@@ -30,7 +27,6 @@ class App extends Component {
         </div>
       </div>
     );
-  }
 }
 
 
